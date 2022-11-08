@@ -12,6 +12,11 @@ export const postsReducer = (state = initialState, action) => {
                 ...state,
                 posts: state.posts.concat([action.payload])
             }
+        case FETCH_POSTS:
+            return {
+                ...state,
+                fetchedPosts: action.payload
+            }
         default:
             return state
     }
